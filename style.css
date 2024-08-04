@@ -2,7 +2,8 @@
     --light-grey: #F0F0F0;
     --light-grey-text: #DDDDDD;
     --grey-text: #5C5C5C;
-    --dark-grey-text: #3F3D3D;
+    --dark-grey: #3F3D3D;
+    --dark-shadow: #BABECC;
     --green: #28D979;
     --dark-green-text: #149063;
     --white: #FFFFFF;
@@ -22,7 +23,7 @@ body {
 }
 
 main {
-    width: 595px;
+    max-width: 596px;
     margin: 1% auto;
 }
 
@@ -31,6 +32,7 @@ main {
     padding: 15px 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -40,6 +42,7 @@ main {
     background-color: var(--light-grey);
     border-radius: 12px;
     min-width: 124px;
+    /*max-width: 268px;*/
 }
 
 /*Avatar*/
@@ -51,6 +54,7 @@ img.avatar {
 /*Name Box*/
 .name-box {
     width: 124px;
+    height: 124px;
 }
 
 .name-box > p, .name-box .job-title {
@@ -66,12 +70,18 @@ img.avatar {
 /*Languages Box*/
 .languages-box {
     height: 124px;
+    flex-grow: 1;
 }
 
 .languages {
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 17px;
+}
+
+.level-languages {
+    width: 100%;
 }
 
 .name-languages > p {
@@ -80,7 +90,7 @@ img.avatar {
 }
 
 .scale {
-    width: 184px;
+    width: 100%;
     height: 11px;
     margin-bottom: 10px;
 }
@@ -105,13 +115,14 @@ img.avatar {
 
 /*Education Box*/
 .education-box {
-    width: 268px;
+    max-width: 268px;
 }
 
 .education-content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 12px;
 }
 
@@ -142,6 +153,7 @@ img.avatar {
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+    max-width: 268px;
 }
 
 .interests-content {
@@ -192,7 +204,7 @@ img.avatar {
 
 /*Experience Box*/
 .experience-box {
-    width: 411px;
+    flex-grow: 1;
 }
 
 .experience-content {
@@ -207,6 +219,47 @@ img.avatar {
 }
 
 /*Other*/
+button {
+    width: 120px;
+    padding: 10px;
+    margin: 12px calc(50% - 60px) 10px;
+
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 0 var(--black);
+
+    font-size: 10px;
+    font-family: inherit;
+    font-weight: 300;
+    line-height: inherit;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.focus-button {
+    background: var(--black);
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+textarea {
+    border: none;
+    font-family: inherit;
+    font-size: 10px;
+    line-height: inherit;
+    resize: none;
+    padding: 5px;
+}
+
+textarea:focus {
+    outline: none;
+    border:1px solid var(--dark-grey);
+}
+
 h3 {
     font-size: 14px;
     font-weight: 400;
