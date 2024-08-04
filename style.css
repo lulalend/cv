@@ -191,14 +191,39 @@ img.avatar {
 
 /*Tools Box*/
 .tools-content {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tools-unit {
+    text-align: center;
+}
+
+.tools-unit span {
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0 auto;
+    padding: 2px 6px;
+    border-radius: 59px;
+    position: relative;
+    top: 5px;
 }
 
 .tools-content-unit {
+    width: 76px;
     background-color: var(--white);
     border-radius: 6px;
+    padding: 16px 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    z-index: 10;
 }
 
 /*Experience Box*/
@@ -209,12 +234,19 @@ img.avatar {
 .experience-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 }
 
 .experience-content-unit {
     background-color: var(--white);
     border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+}
+
+.experience-content-unit p {
+    font-weight: 500;
 }
 
 /*Other*/
@@ -259,7 +291,7 @@ textarea {
 
 textarea:focus {
     outline: none;
-    /*border:1px solid var(--dark-green-text);*/
+    border:1px solid var(--dark-green-text);
 }
 
 h3 {
@@ -271,6 +303,15 @@ h3 {
 
 h4 {
     font-weight: 500;
+}
+
+.last-unit {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.last-unit .education-hashtags {
+    color: var(--white);
 }
 
 .name-box, .education-unit, .contact {

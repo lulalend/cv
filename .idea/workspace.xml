@@ -40,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/yana/Documents/dev/front/interviews/cv/cv",
+    "last_opened_file_path": "/Users/yana/Documents/dev/front/interviews/cv/cv/images/tools",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -55,6 +55,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/tools" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
@@ -68,7 +70,7 @@
       <updated>1722503261251</updated>
       <workItem from="1722503262336" duration="16816000" />
       <workItem from="1722593091132" duration="35000" />
-      <workItem from="1722593131681" duration="26615000" />
+      <workItem from="1722593131681" duration="32291000" />
     </task>
     <servers />
   </component>
