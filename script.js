@@ -24,14 +24,16 @@ button.addEventListener('mouseup', () => {
 
 document.querySelector('.container').addEventListener('click',e => {
     const originalElement = e.target;
-    
+
     if (!originalElement.classList.contains('not-text') && originalElement.childNodes.length === 1) {
         const changedElement = originalElement;
         const newElement = document.createElement('textarea');
         newElement.classList.add('not-text');
+        newElement.classList.add('ripple');
         newElement.value = `${originalElement.innerHTML}`;
-        // newElement.style = `background-color: transparent;`;
-        newElement.rows = 1;
+        // newElement.rows = 1;
+        if (originalElement.classList.contains('white-text'))
+            newElement.style.color = `var(--white)`;
 
         originalElement.replaceWith(newElement);
         newElement.focus();

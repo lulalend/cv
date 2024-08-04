@@ -42,7 +42,6 @@ main {
     background-color: var(--light-grey);
     border-radius: 12px;
     min-width: 124px;
-    /*max-width: 268px;*/
 }
 
 /*Avatar*/
@@ -253,11 +252,14 @@ textarea {
     line-height: inherit;
     resize: none;
     padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 textarea:focus {
     outline: none;
-    border:1px solid var(--dark-grey);
+    /*border:1px solid var(--dark-green-text);*/
 }
 
 h3 {
@@ -292,4 +294,24 @@ h4 {
 
 .large-text {
     font-size: 14px;
+}
+
+.ripple {
+    animation: ripple 1.5s linear;
+    transition: all ease 0.8s;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(20, 144, 99, 0.3),
+        0 0 0 1px rgba(20, 144, 99, 0.3),
+        0 0 0 3px rgba(20, 144, 99, 0.3),
+        0 0 0 5px rgba(20, 144, 99, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(20, 144, 99, 0.3),
+        0 0 0 4px rgba(20, 144, 99, 0.3),
+        0 0 0 20px rgba(20, 144, 99, 0),
+        0 0 0 30px rgba(20, 144, 99, 0);
+    }
 }
