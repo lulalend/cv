@@ -2,18 +2,15 @@ const fileName = 'myCV.pdf';
 const button = document.querySelector('#download-pdf');
 
 button.addEventListener('click', () => {
-    const { jsPDF } = window.jspdf;
-
-    let doc = new jsPDF('p', 'pt', 'letter');
     const content = document.querySelector('.container');
 
-    doc.html(content, {
-        callback: function(doc) {
-            doc.save(fileName);
-        },
-        x: 12,
-        y: 12
-    });
+   const opt = {
+        margin: 1,
+        filename: fileName,
+        image: { type: 'jpeg', quality: 0.98 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().from(content).set(opt).save();
 });
 button.addEventListener('mousedown',() => {
     button.classList.add('focus-button');
@@ -31,7 +28,6 @@ document.querySelector('.container').addEventListener('click',e => {
         newElement.classList.add('not-text');
         newElement.classList.add('ripple');
         newElement.value = `${originalElement.innerHTML}`;
-        // newElement.rows = 1;
         if (originalElement.classList.contains('white-text'))
             newElement.style.color = `var(--white)`;
 
